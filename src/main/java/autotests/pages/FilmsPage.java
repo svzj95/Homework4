@@ -1,10 +1,10 @@
-package pages;
+package autotests.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import steps.BaseSteps;
+import autotests.steps.BaseSteps;
 
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class FilmsPage extends BasePageObject {
     public FilmsDayPage chooseDate(String value){
         firstClickDateButton.click();
         for(WebElement i : dates){
-            if(i.getText() == value){
+            if(i.getText().equals(value)){
                 i.click();
                 break;
             }

@@ -1,7 +1,7 @@
-package steps;
+package autotests.steps;
 
 import io.qameta.allure.Step;
-import pages.MainPage;
+import autotests.pages.MainPage;
 
 public class MainPageSteps extends BaseSteps {
 

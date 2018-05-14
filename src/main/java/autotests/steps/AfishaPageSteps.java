@@ -1,13 +1,13 @@
-package steps;
+package autotests.steps;
 
 import io.qameta.allure.Step;
-import pages.AfishaPage;
+import autotests.pages.AfishaPage;
 
 
 public class AfishaPageSteps extends BaseSteps {
 
     @Step("Выбрать пункт меню - {menuItem}")
-    public void selectMenuItem(String menuItem){
+    public void selectEvent(String menuItem){
         new AfishaPage().selectMenuItem(menuItem);
     }
 }

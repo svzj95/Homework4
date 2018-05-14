@@ -1,4 +1,4 @@
-package steps;
+package autotests.steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -8,7 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import utils.TestProperties;
+import autotests.utils.TestProperties;
 
 
 import java.util.HashMap;
@@ -36,7 +36,7 @@ public class BaseSteps {
     }
 
     @Before
-    public static void setUp() throws Exception {
+    public static void setUp() {
         switch (properties.getProperty("browser")){
             case "firefox":
                 System.setProperty("webdriver.gecko.driver", properties.getProperty("webdriver.gecko.driver"));
@@ -59,7 +59,7 @@ public class BaseSteps {
     }
 
     @After
-    public static void tearDown() throws Exception {
+    public static void tearDown() {
         driver.quit();
     }
 

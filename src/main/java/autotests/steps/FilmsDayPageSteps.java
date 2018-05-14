@@ -1,13 +1,11 @@
-package steps;
+package autotests.steps;
 
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebElement;
-import pages.FilmsDayPage;
-import pages.FilmsPage;
+import autotests.pages.FilmsDayPage;
 
 public class FilmsDayPageSteps extends BaseSteps {
     @Step("Найти фильм с рейтингом >= {value}")
-    public void findFilmwithRating(float value){
+    public void findFilmwithRating(String value){
         new FilmsDayPage().findItemWithRatingMoreEqualThan(value);
     }
 
@@ -22,7 +20,7 @@ public class FilmsDayPageSteps extends BaseSteps {
     }
 
     @Step("Нажать на выбранный фильм")
-    public void checkFilmAndCinemas(){
+    public void getFilmAndCinemas(){
         new FilmsDayPage().checkFilmAndCinemas();
     }
 }

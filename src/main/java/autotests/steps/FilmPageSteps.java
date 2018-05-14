@@ -1,8 +1,8 @@
-package steps;
+package autotests.steps;
 
 
 import io.qameta.allure.Step;
-import pages.FilmsPage;
+import autotests.pages.FilmsPage;
 
 public class FilmPageSteps {
     @Step("Проверить, что есть заголовок – {value}")

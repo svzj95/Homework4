@@ -1,4 +1,4 @@
-package utils;
+package autotests.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

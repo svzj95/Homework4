@@ -1,9 +1,9 @@
-package utils;
+package autotests.utils;
 
 
 import gherkin.formatter.model.Result;
 import io.qameta.allure.cucumberjvm.AllureCucumberJvm;
-import steps.BaseSteps;
+import autotests.steps.BaseSteps;
 
 
 public class AllureReporter extends AllureCucumberJvm {

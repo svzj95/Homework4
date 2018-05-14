@@ -1,13 +1,12 @@
-package pages;
+package autotests.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import steps.BaseSteps;
+import autotests.steps.BaseSteps;
 
-import java.lang.reflect.Array;
 import java.util.List;
 
 public class FilmsDayPage extends BasePageObject {
@@ -19,9 +18,9 @@ public class FilmsDayPage extends BasePageObject {
         PageFactory.initElements(BaseSteps.getDriver(), this);
     }
 
-    public void findItemWithRatingMoreEqualThan(float value) {
+    public void findItemWithRatingMoreEqualThan(String value) {
         for (WebElement i : itemsCards) {
-            if (Float.parseFloat(i.findElement(By.xpath("/descendant::div[@class='event-rating__value']")).getText()) >= value) {
+            if (Float.parseFloat(i.findElement(By.xpath("/descendant::div[@class='event-rating__value']")).getText()) >= Float.parseFloat(value)) {
                 BaseSteps.put("film", i);
                 break;
             }

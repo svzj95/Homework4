@@ -3,9 +3,9 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/resources/"}, glue = {"src/main/java/steps"},
+@CucumberOptions(features = {"src/test/resources/"}, glue = {"autotests"},
         plugin = {
-                "utils.AllureReporter",
+                "autotests.utils.AllureReporter",
         }
 )
 public class CucumberRunner {
