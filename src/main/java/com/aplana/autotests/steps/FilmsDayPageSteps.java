@@ -1,7 +1,7 @@
-package autotests.steps;
+package com.aplana.autotests.steps;
 
 import io.qameta.allure.Step;
-import autotests.pages.FilmsDayPage;
+import com.aplana.autotests.pages.FilmsDayPage;
 
 public class FilmsDayPageSteps extends BaseSteps {
     @Step("Найти фильм с рейтингом >= {value}")

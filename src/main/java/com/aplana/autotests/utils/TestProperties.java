@@ -1,4 +1,4 @@
-package autotests.utils;
+package com.aplana.autotests.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

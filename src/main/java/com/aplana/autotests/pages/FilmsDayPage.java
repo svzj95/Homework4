@@ -1,18 +1,18 @@
-package autotests.pages;
+package com.aplana.autotests.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import autotests.steps.BaseSteps;
+import com.aplana.autotests.steps.BaseSteps;
 
 import java.util.List;
 
 public class FilmsDayPage extends BasePageObject {
 
     @FindBy(xpath = "//div[contains(@class,'events-list__item')]")
-    List<WebElement> itemsCards;
+    private List<WebElement> itemsCards;
 
     public FilmsDayPage() {
         PageFactory.initElements(BaseSteps.getDriver(), this);

@@ -1,4 +1,4 @@
-package autotests.steps;
+package com.aplana.autotests.steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -8,7 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import autotests.utils.TestProperties;
+import com.aplana.autotests.utils.TestProperties;
 
 
 import java.util.HashMap;
@@ -18,9 +18,9 @@ import java.util.concurrent.TimeUnit;
 
 
 public class BaseSteps {
-    protected static WebDriver driver;
-    protected static String baseUrl;
-    public static Properties properties = TestProperties.getInstance().getProperties();
+    private static WebDriver driver;
+    private static String baseUrl;
+    private static Properties properties = TestProperties.getInstance().getProperties();
     private static Map<String, Object> stash = new HashMap<>();
 
     public static Object get (String key){

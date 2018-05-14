@@ -1,8 +1,8 @@
-package autotests.steps;
+package com.aplana.autotests.steps;
 
 
+import com.aplana.autotests.pages.FilmsPage;
 import io.qameta.allure.Step;
-import autotests.pages.FilmsPage;
 
 public class FilmPageSteps {
     @Step("Проверить, что есть заголовок – {value}")

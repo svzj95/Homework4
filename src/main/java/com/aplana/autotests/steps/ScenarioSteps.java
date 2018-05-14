@@ -1,16 +1,16 @@
-package autotests.steps;
+package com.aplana.autotests.steps;
 
 import cucumber.api.java.en.When;
-import autotests.pages.AfishaPage;
-import autotests.pages.FilmsDayPage;
-import autotests.pages.FilmsPage;
-import autotests.pages.MainPage;
+import com.aplana.autotests.pages.AfishaPage;
+import com.aplana.autotests.pages.FilmsDayPage;
+import com.aplana.autotests.pages.FilmsPage;
+import com.aplana.autotests.pages.MainPage;
 
 public class ScenarioSteps {
-    MainPage mainPage = new MainPage();
-    AfishaPage afishaPage = new AfishaPage();
-    FilmsPage filmsPage = new FilmsPage();
-    FilmsDayPage filmsDayPage = new FilmsDayPage();
+    private MainPage mainPage = new MainPage();
+    private AfishaPage afishaPage = new AfishaPage();
+    private FilmsPage filmsPage = new FilmsPage();
+    private FilmsDayPage filmsDayPage = new FilmsDayPage();
 
     @When("^Перейти в меню - \"(.+)\"$")
     public void selectMenuItem(String menuItem){
@@ -18,7 +18,7 @@ public class ScenarioSteps {
     }
 
     @When("^Выбрать пункт меню - \"(.+)\"$")
-    public void selectEvent(String menuItem) { afishaPage.selectMenuItem(menuItem); }
+    public void selectEvent(String menuItem) { afishaPage.selectCategoryItem(menuItem); }
 
     @When("^Проверить, что есть заголовок – \"(.+)\"$")
     public void checkTitle(String title){
