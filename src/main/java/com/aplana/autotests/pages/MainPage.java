@@ -8,7 +8,7 @@ import com.aplana.autotests.steps.BaseSteps;
 import java.util.List;
 
 public class MainPage extends BasePageObject {
-    @FindBy(xpath = "//div[@class='row text_black_yes heap__row widgets__row widgets__row_tr_2']//a[@class='home-link home-link_blue_yes'")
+    @FindBy(xpath = "//div[@class='row text_black_yes heap__row widgets__row widgets__row_tr_2']//a[@class='home-link home-link_blue_yes']")
     private List<WebElement> menuItems;
 
     public MainPage(){

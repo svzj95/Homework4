@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.aplana.autotests.steps.BaseSteps;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
@@ -14,13 +15,18 @@ public class FilmsDayPage extends BasePageObject {
     @FindBy(xpath = "//div[contains(@class,'events-list__item')]")
     private List<WebElement> itemsCards;
 
+    @FindBy(xpath = "//div[@class='tutorial-modal__close']")
+    private WebElement crossModalButton;
+
     public FilmsDayPage() {
         PageFactory.initElements(BaseSteps.getDriver(), this);
     }
 
-    public void findItemWithRatingMoreEqualThan(String value) {
+    public void findItemWithRatingMoreEqualThan(String value){
+        if(crossModalButton.isDisplayed())
+            crossModalButton.click();
         for (WebElement i : itemsCards) {
-            if (Float.parseFloat(i.findElement(By.xpath("/descendant::div[@class='event-rating__value']")).getText()) >= Float.parseFloat(value)) {
+            if (Float.parseFloat(i.findElement(By.xpath("descendant::div[@class=\"event-rating__value\"]")).getText()) >= Float.parseFloat(value)) {
                 BaseSteps.put("film", i);
                 break;
             }
@@ -28,8 +34,8 @@ public class FilmsDayPage extends BasePageObject {
     }
 
     public void findFilmByNameAndGettingCinemas() {
-        BaseSteps.put("name", ((WebElement) BaseSteps.get("film")).findElement(By.xpath("/descendant::h2")).getText());
-        BaseSteps.put("cinemas", ((WebElement) BaseSteps.get("film")).findElement(By.xpath("/descendant::span[@class='event__place-name']")).getText().replaceAll("\\D+", ""));
+        BaseSteps.put("name", ((WebElement) BaseSteps.get("film")).findElement(By.xpath("descendant::h2")).getText());
+        BaseSteps.put("cinemas", ((WebElement) BaseSteps.get("film")).findElement(By.xpath("descendant::span[@class='event__place-name']")).getText().replaceAll("\\D+", ""));
     }
 
     public void clickOnFilm() {

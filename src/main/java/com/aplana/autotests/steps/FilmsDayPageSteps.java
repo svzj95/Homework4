@@ -3,9 +3,9 @@ package com.aplana.autotests.steps;
 import io.qameta.allure.Step;
 import com.aplana.autotests.pages.FilmsDayPage;
 
-public class FilmsDayPageSteps extends BaseSteps {
+public class FilmsDayPageSteps {
     @Step("Найти фильм с рейтингом >= {value}")
-    public void findFilmwithRating(String value){
+    public void findFilmwithRating(String value) {
         new FilmsDayPage().findItemWithRatingMoreEqualThan(value);
     }
 

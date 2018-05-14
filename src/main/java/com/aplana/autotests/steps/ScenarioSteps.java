@@ -21,7 +21,7 @@ public class ScenarioSteps {
     public void selectEvent(String menuItem) { afishaPage.selectCategoryItem(menuItem); }
 
     @When("^Проверить, что есть заголовок – \"(.+)\"$")
-    public void checkTitle(String title){
+    public void checkTitle(String title) {
         filmsPage.checkTitle(title);
     }
 
@@ -31,7 +31,7 @@ public class ScenarioSteps {
     }
 
     @When("^Найти фильм с рейтингом >= \"(.+)\"$")
-    public void findItemWithRaingMoreEqualThan(String value){
+    public void findItemWithRaingMoreEqualThan(String value) {
         filmsDayPage.findItemWithRatingMoreEqualThan(value);
     }
 
